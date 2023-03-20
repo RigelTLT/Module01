@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

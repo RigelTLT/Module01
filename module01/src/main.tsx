@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Root from './root';
-import ErrorPage from './error-page';
+import Root from './pages/root/root';
+import ErrorPage from './pages/error/error-page';
 
 const router = createBrowserRouter([
   {

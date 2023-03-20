@@ -1,39 +1,32 @@
 import React from 'react';
 import './root.scss';
+import Header from '../../components/header/ClassHeader';
+import Card from '../../components/CardList/ClassCards';
+import { List } from '../../components/CardList/List';
 
 export default function Root() {
   return (
     <>
+      <Header />
       <div id="sidebar">
         <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
+        <div className="search-bar">
+          <form className="search-form" role="search">
             <input
-              id="q"
+              className="search"
               aria-label="Search contacts"
               placeholder="Search"
               type="search"
-              name="q"
             />
             <div id="search-spinner" aria-hidden hidden={true} />
             <div className="sr-only" aria-live="polite"></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
+            <button type="submit">&#128269;</button>
           </form>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/contacts/1`}>Your Name</a>
-            </li>
-            <li>
-              <a href={`/contacts/2`}>Your Friend</a>
-            </li>
-          </ul>
-        </nav>
       </div>
-      <div id="detail"></div>
+      <div id="card-list">
+        <Card cards={List} />
+      </div>
     </>
   );
 }
