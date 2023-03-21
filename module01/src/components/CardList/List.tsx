@@ -1,4 +1,4 @@
-export const cardItem = [
+export const cardItems = [
   {
     id: 1,
     image: '../../assets/img/food01.jpg',

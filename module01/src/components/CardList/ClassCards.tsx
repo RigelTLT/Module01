@@ -1,4 +1,6 @@
 import React from 'react';
+import { cardItems } from '../../components/CardList/List';
+import CardItem from '../../components/CardItem/cardItem';
 
 interface Card {
   id: string;
@@ -14,12 +16,15 @@ type CardListProps = {
 export default class Cards extends React.Component {
   constructor(props: CardListProps) {
     super(props);
+    this.state = { cards: props };
   }
   render(): React.ReactNode {
-    return <div className="card-content">
-      {
-this.props.cards.map(card =>(< />)
-      }
-    </div>;
+    return (
+      <div className="card-content">
+        {cardItems.map((card) => (
+          <CardItem {...card} key={card.id} />
+        ))}
+      </div>
+    );
   }
 }

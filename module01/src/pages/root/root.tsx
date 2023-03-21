@@ -2,7 +2,6 @@ import React from 'react';
 import './root.scss';
 import Header from '../../components/header/ClassHeader';
 import Card from '../../components/CardList/ClassCards';
-import { List } from '../../components/CardList/List';
 
 export default function Root() {
   return (
@@ -25,7 +24,7 @@ export default function Root() {
         </div>
       </div>
       <div id="card-list">
-        <Card cards={List} />
+        <Card />
       </div>
     </>
   );
