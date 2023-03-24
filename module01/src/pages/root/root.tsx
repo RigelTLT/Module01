@@ -1,12 +1,11 @@
 import React from 'react';
 import './root.scss';
-import Header from '../../components/header/ClassHeader';
+
 import Card from '../../components/CardList/ClassCards';
 
 export default function Root() {
   return (
     <>
-      <Header />
       <div id="sidebar">
         <h1>React Router Contacts</h1>
         <div className="search-bar">
