@@ -1,27 +1,16 @@
 import React from 'react';
-import { cardItems } from '../../components/CardList/List';
 import CardItem from '../../components/CardItem/cardItem';
+import { Props } from '../../components/interface/interface';
 
-interface Card {
-  id: string;
-  image: string;
-  price: number;
-  title: string;
-  description: string;
-}
-
-type CardListProps = {
-  cards: Card[];
-};
-export default class Cards extends React.Component {
-  constructor(props: CardListProps) {
+export default class Cards extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
-    this.state = { cards: props };
   }
   render(): React.ReactNode {
+    const items = this.props.items;
     return (
       <div className="card-content">
-        {cardItems.map((card) => (
+        {items.cards.map((card) => (
           <CardItem {...card} key={card.id} />
         ))}
       </div>
